@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Тестовый портал
+{% endblock %}
+
+{% block content %}
+    <h1>Headers</h1>
+
+
+    {% for key, value in headers.items %}
+
+        <div class="card">
+            <div class="card-header">
+                {{ key }}
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+		    {{ value }}
+                </blockquote>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+
+
+
+
+{% endblock %}

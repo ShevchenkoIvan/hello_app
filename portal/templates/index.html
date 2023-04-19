@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Тестовый портал
+{% endblock %}
+
+{% block content %}
+    <h1>Портал для тестов</h1>
+
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    Host name:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+		{{ host_name }}
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    Remote ip:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+		{{ remote_ip }}
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    Content secret file:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+		{{ secret_file }}
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    Content secret env:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+		{{ secret_env }}
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="card">
+  <div class="card-header">
+    Content config file:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+		{{ config_file }}
+    </blockquote>
+  </div>
+</div>
+
+<br>
+<br>
+
+<button type="button" class="btn btn-primary" id="ClickButton">Click me</button>
+<p>Clicks: <a id="ClickView">0</a></p>
+
+
+{% endblock %}
