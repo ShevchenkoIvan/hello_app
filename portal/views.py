@@ -1,6 +1,15 @@
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
 from django.shortcuts import render
 import socket
 import os
+
+
+@api_view(['GET'])
+def api_status(request):
+    text = "server Ok"
+    return Response(text, status=status.HTTP_200_OK)
 
 
 def index_view(request):
@@ -32,6 +41,9 @@ def index_view(request):
 
 
 def page1_view(request):
+    return render(request, 'page1.html')
+
+def page2_view(request):
     return render(request, 'page1.html')
 
 
