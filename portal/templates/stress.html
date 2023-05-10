@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Stress
+{% endblock %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-primary" name="strs_btn" type="submit" value="strs_btn">Дать нагрузку на 1 минуту</button>
+    </form>
+
+{% endblock %}
